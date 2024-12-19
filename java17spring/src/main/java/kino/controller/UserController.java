@@ -20,7 +20,6 @@ public class UserController {
     Logger logger = LoggerFactory.getLogger(UserController.class);
     @PostMapping
     public User createUser(@RequestBody User user) {
-        System.out.println("Controller:" + user.toString());
         return userService.saveUser(user);
     }
 

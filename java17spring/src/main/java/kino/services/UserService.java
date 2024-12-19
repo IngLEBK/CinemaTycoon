@@ -17,11 +17,9 @@ public class UserService {
     private UserRepository userRepository;
 
     public User saveUser(User user) {
-        System.out.println("Service:" + user.toString());
-        User dbuser = userRepository.save(user);
-        dbuser.setId(dbuser.getId() + 10L);
-        System.out.println("Nach db insert:" + dbuser.toString());
-        return dbuser;
+        //User dbuser = userRepository.save(user);
+        //dbuser.setId(dbuser.getId() + 10L);
+        return userRepository.save(user);
     }
 
     public User findUserById(Long id) {
